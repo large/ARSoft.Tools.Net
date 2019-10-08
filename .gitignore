@@ -3,3 +3,8 @@
 ################################################################################
 
 /ARSoft.Tools.Net/ARSoft.Tools.Net.2.2.9.nupkg
+*.nupkg
+/.vs
+/ARSoft.Tools.Net/obj
+/bin
+/packages/BouncyCastle.1.8.5
