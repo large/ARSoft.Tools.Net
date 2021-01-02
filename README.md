@@ -1,3 +1,6 @@
+# Support for .Net 5
+Library updated for .Net 5 core, no changes done to the original code rather than changing to Portable BouncyCastle version.
+
 # Project Description
 This project contains a complete managed .Net SPF validation, SenderID validation and a dns client and dns server implementation written in C#.
 

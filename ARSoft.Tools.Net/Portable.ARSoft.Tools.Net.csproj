@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <ApplicationVersion>5.0.1</ApplicationVersion>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Alexander Reinert, Lars Werner</Authors>
+    <RootNamespace>ARSoft.Tools.Net</RootNamespace>
+    <PackageId>Portable.ARSoft.Tools.Net</PackageId>
+    <AssemblyVersion>5.0.1.0</AssemblyVersion>
+    <FileVersion>5.0.1.0</FileVersion>
+    <Company>Alexander Reinert</Company>
+    <Version>5.0.1</Version>
+    <Product>ARSoft.Tools.Net</Product>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/large/Portable.ARSoft.Tools.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/large/Portable.ARSoft.Tools.Net</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageTags>Encoding, Decoding, Spf, SenderID, Dns</PackageTags>
+    <PackageReleaseNotes>Updated for .Net 5</PackageReleaseNotes>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\NOTICE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.9" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Dns\DnsAsyncState.cs" />
+    <Compile Remove="Dns\DnsClientAsyncState.cs" />
+    <Compile Remove="Dns\DnsClientParallelAsyncState.cs" />
+    <Compile Remove="Dns\DnsClientParallelState.cs" />
+    <Compile Remove="Dns\DnsRecord\DhcpIRecord.cs" />
+    <Compile Remove="IPAddressExtension.cs" />
+    <Compile Remove="Socket\UdpListener.cs" />
+    <Compile Remove="Spf\SpfCheckHostParameter.cs" />
+  </ItemGroup>
+</Project>
